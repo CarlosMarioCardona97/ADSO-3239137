@@ -5,4 +5,6 @@
 | Las pruebas unitarias del dominio y de la aplicación son PHP puro: no arrancan Laravel.
 */
 
+require_once __DIR__.'/Fakes/InMemory.php';
+
 pest()->extend(Tests\TestCase::class)->in('Feature');
