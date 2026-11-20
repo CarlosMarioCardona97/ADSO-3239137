@@ -1,8 +1,7 @@
 # Imagen de la API Archive: PHP 8.3 con la extensión de PostgreSQL.
 FROM php:8.3-cli-alpine
-RUN apk add --no-cache postgresql-dev \
-    && docker-php-ext-install pdo_pgsql \
-    && apk del postgresql-dev && apk add --no-cache libpq
+RUN apk add --no-cache libpq-dev \
+    && docker-php-ext-install pdo_pgsql
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 WORKDIR /app
 COPY . .
