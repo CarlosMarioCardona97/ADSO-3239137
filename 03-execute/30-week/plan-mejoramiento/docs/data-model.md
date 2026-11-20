@@ -22,7 +22,8 @@ Cada regla lleva una de **tres marcas**: **motor** (la impone la base), **solo d
 | Esquema | `archive` | `archive.loan` |
 
 `user` se escribe `archive."user"` en SQL a mano, porque es palabra reservada en PostgreSQL. Laravel lo entrecomilla solo.
-La tabla técnica `migrations` de Laravel también vive en el esquema `archive`; no forma parte del dominio.
+La tabla técnica de Laravel vive en `public.migrations` (Laravel la crea antes de que exista el esquema `archive`); no
+forma parte del dominio. La conexión usa `search_path = archive,public`.
 
 ## 1. Glosario
 

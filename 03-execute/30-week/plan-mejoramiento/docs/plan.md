@@ -28,7 +28,7 @@ aquí: vive en [`data-model.md`](data-model.md). La forma del sistema está en [
 | Variable | Obligatoria | Ejemplo |
 |---|---|---|
 | `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD` | sí | `db`, `5432`, `archive`, `archive`, definida en `.env` |
-| `DB_SEARCH_PATH` | sí | `archive` |
+| `DB_SEARCH_PATH` | sí | `archive,public` |
 | `APP_KEY` | sí | generada con `php artisan key:generate` |
 | `JWT_SECRET` | sí | cadena larga aleatoria |
 | `ADMIN_USERNAME` / `ADMIN_PASSWORD` | sí | definidos en `.env`, nunca en el repositorio |
