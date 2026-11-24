@@ -1,4 +1,4 @@
-# Archive: levanta PostgreSQL vacío y la API con un solo comando (RNF-5, T-20).
+# Archive: levanta PostgreSQL vacío, la API y el sitio público con un solo comando (RNF-5, T-20).
 #   docker compose --env-file .env up --build
 name: archive
 
@@ -32,6 +32,13 @@ services:
     depends_on:
       db:
         condition: service_healthy
+
+  page:
+    image: nginx:1.27-alpine
+    volumes:
+      - ../page:/usr/share/nginx/html:ro
+    ports:
+      - "8088:80"
 
 volumes:
   db-data:

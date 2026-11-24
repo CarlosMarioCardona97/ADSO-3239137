@@ -20,6 +20,7 @@ docker compose --env-file .env up --build
 |---|---|---|
 | `db` | `localhost:5432` | PostgreSQL 16, base `archive` |
 | `api` | `http://localhost:8000/api/v1/health` | API Laravel |
+| `page` | `http://localhost:8088` | Sitio público estático (nginx) |
 
 ## Comprobar que la base arranca vacía
 
