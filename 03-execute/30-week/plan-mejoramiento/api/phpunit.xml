@@ -8,6 +8,9 @@
         <testsuite name="Unit">
             <directory>tests/Unit</directory>
         </testsuite>
+        <testsuite name="Architecture">
+            <directory>tests/Architecture</directory>
+        </testsuite>
         <testsuite name="Feature">
             <directory>tests/Feature</directory>
         </testsuite>
@@ -24,9 +27,17 @@
         <env name="BROADCAST_CONNECTION" value="null"/>
         <env name="CACHE_STORE" value="array"/>
         <env name="DB_CONNECTION" value="pgsql" force="true"/>
+        <server name="DB_CONNECTION" value="pgsql" force="true"/>
         <env name="DB_DATABASE" value="archive_test" force="true"/>
+        <server name="DB_DATABASE" value="archive_test" force="true"/>
         <env name="JWT_SECRET" value="test-secret-de-pruebas-con-longitud-suficiente-32" force="true"/>
+        <server name="JWT_SECRET" value="test-secret-de-pruebas-con-longitud-suficiente-32" force="true"/>
         <env name="CLOCK_OFFSET_DAYS" value="0" force="true"/>
+        <server name="CLOCK_OFFSET_DAYS" value="0" force="true"/>
+        <env name="ADMIN_USERNAME" value="Admin" force="true"/>
+        <server name="ADMIN_USERNAME" value="Admin" force="true"/>
+        <env name="ADMIN_PASSWORD" value="Admin-de-pruebas-1" force="true"/>
+        <server name="ADMIN_PASSWORD" value="Admin-de-pruebas-1" force="true"/>
         <env name="DB_URL" value=""/>
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
