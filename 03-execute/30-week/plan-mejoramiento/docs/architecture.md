@@ -48,7 +48,7 @@ flowchart LR
       DOM["Domain<br/>agregados y objetos de valor"]
     end
     subgraph Salida
-      DB["Infrastructure/Persistence<br/>(Eloquent + migraciones)"]
+      DB["Infrastructure/Persistence<br/>(Query Builder + migraciones)"]
       STO["Infrastructure/Storage<br/>carátulas"]
       SEC["Infrastructure/Security<br/>hash, token y reloj"]
     end
@@ -76,7 +76,7 @@ api/app/
 │                           # OverdueItemsService, MostRequestedReportService
 ├── Infrastructure/
 │   ├── Http/               # Controllers/, Middleware/ (JWT y rol), Requests/, ErrorRenderer
-│   ├── Persistence/        # Models/ (Eloquent) y repositorios Eloquent*
+│   ├── Persistence/        # repositorios Db* con el Query Builder (DbDossierRepository, DbLoanRepository, …)
 │   ├── Storage/            # LocalCoverStorage
 │   └── Security/           # BcryptPasswordHasher, JwtTokenIssuer, SystemClock
 ├── Console/                # BootstrapAdminCommand (archive:bootstrap-admin)

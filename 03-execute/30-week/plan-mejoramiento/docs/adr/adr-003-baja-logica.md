@@ -4,7 +4,7 @@
 - **Contexto:** una línea de préstamo apunta a un expediente. Si el expediente se borra físicamente, el historial y el
   reporte quedan rotos. Además, un archivo público debe poder demostrar qué se prestó y a quién.
 - **Decisión:** el expediente lleva `deleted_at`. Darlo de baja lo llena; el catálogo filtra por `deleted_at IS NULL` en
-  un único lugar (el repositorio `EloquentDossierRepository`). Un expediente con préstamos abiertos **no** se da de baja
+  un único lugar (el método `active()` de `DbDossierRepository`). Un expediente con préstamos abiertos **no** se da de baja
   (409 `DOSSIER_HAS_OPEN_LOANS`). La unicidad del número de radicado es un índice **parcial** sobre expedientes activos,
   así un radicado dado de baja puede volver a registrarse.
 - **Alternativas descartadas:** borrado físico con cascada (destruye el histórico); una columna `active = false` (no dice

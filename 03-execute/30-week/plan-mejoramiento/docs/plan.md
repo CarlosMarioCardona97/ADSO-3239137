@@ -9,7 +9,7 @@ aquí: vive en [`data-model.md`](data-model.md). La forma del sistema está en [
 |---|---|---|---|
 | D-01 | Lenguaje y runtime del backend | PHP 8.3 | Exigido por el plan de mejoramiento |
 | D-02 | Framework HTTP | Laravel 12, solo como API (`routes/api.php`, prefijo `/api/v1`) | Contrato en [`api-contract.md`](api-contract.md) |
-| D-03 | Persistencia | Eloquent + migraciones de Laravel sobre PostgreSQL 16, esquema `archive` | El esquema es de las migraciones ([ADR-001](adr/adr-001-propiedad-del-esquema.md)) |
+| D-03 | Persistencia | Query Builder de Laravel (SQL visible, sin modelos Eloquent) + migraciones sobre PostgreSQL 16, esquema `archive` | El esquema es de las migraciones ([ADR-001](adr/adr-001-propiedad-del-esquema.md)); el SQL del testigo de versión queda explícito |
 | D-04 | Concurrencia | Testigo de versión por expediente + `CHECK` de rango ([ADR-002](adr/adr-002-concurrencia-optimista.md)) | Última unidad (RNF-2) |
 | D-05 | Fechas | Instantes UTC (`timestamptz`); el reloj es un puerto (`Clock`) | Probar vencimientos sin esperar 5 días |
 | D-06 | Reporte | Una consulta agregada a través de un puerto de lectura ([ADR-004](adr/adr-004-reporte-agregado-y-congelado.md)) | Estable y barato |

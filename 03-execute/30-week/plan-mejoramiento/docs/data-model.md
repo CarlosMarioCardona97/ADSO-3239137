@@ -120,7 +120,7 @@ Ninguna columna lleva `DEFAULT`: los valores los pone el dominio.
 | `role` | `varchar(40)` | no | `admin` o `archivist` |
 
 Reglas transversales: **todas las marcas de tiempo son `timestamptz`**. **No hay columnas de auditoría**
-(`created_at`/`updated_at`) porque ningún requisito las pide; los modelos Eloquent declaran `$timestamps = false`.
+(`created_at`/`updated_at`) porque ningún requisito las pide.
 
 ## 4. Restricciones e índices: dónde vive cada regla
 
