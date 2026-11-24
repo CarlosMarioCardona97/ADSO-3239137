@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archive — Préstamo de expedientes del archivo municipal</title>
+  <meta name="description" content="Archive lleva el catálogo de expedientes del archivo municipal, los préstamos a funcionarios y los vencidos, sin planillas ni cuadernos.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#inicio">
+        <img src="assets/logo.svg" alt="" width="36" height="36">
+        <span>Archive</span>
+      </a>
+      <nav aria-label="Secciones">
+        <a href="#funciones">Funciones</a>
+        <a href="#reglas">Reglas</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#seguridad">Seguridad</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Archivo municipal</p>
+          <h1>Cada expediente prestado, a la vista y con fecha de regreso.</h1>
+          <p class="lead">
+            Archive lleva el catálogo de expedientes, los préstamos a los funcionarios de la alcaldía y las
+            devoluciones. Sabe qué unidades quedan, quién tiene qué y qué está vencido, sin planillas ni cuadernos.
+          </p>
+          <a class="button" href="#como-funciona">Ver cómo funciona</a>
+        </div>
+        <figure class="card ticket" aria-label="Ejemplo de préstamo">
+          <p class="ticket-label">Préstamo registrado</p>
+          <p class="ticket-number">2024-000153</p>
+          <p class="ticket-title">Contrato de obra pública 045 — pavimentación barrio Las Granjas</p>
+          <dl>
+            <div><dt>Categoría</dt><dd>Contratos</dd></div>
+            <div><dt>Entregado</dt><dd>14 nov · 9:15</dd></div>
+            <div><dt>Vence</dt><dd>19 nov · 9:15</dd></div>
+          </dl>
+          <span class="badge">Abierto</span>
+        </figure>
+      </div>
+    </section>
+
+    <section id="funciones" class="section">
+      <div class="container">
+        <h2>Lo que hace el archivo con Archive</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Catálogo de expedientes</h3>
+            <p>Cada expediente con su número de radicado, dependencia productora, categoría y unidades. Búsqueda por texto y filtro por categoría.</p>
+          </article>
+          <article class="card">
+            <h3>Préstamos y devoluciones</h3>
+            <p>Hasta tres expedientes por préstamo. Las unidades se descuentan al entregar y se suman al devolver, una línea a la vez.</p>
+          </article>
+          <article class="card">
+            <h3>Vencidos al día</h3>
+            <p>Lista de expedientes sin devolver después del plazo, con el funcionario y los días de retraso, de mayor a menor.</p>
+          </article>
+          <article class="card">
+            <h3>Más solicitados</h3>
+            <p>Reporte por rango de fechas de los expedientes que más se piden. Un periodo cerrado no cambia aunque luego se renombre un expediente.</p>
+          </article>
+          <article class="card">
+            <h3>Carátula digitalizada</h3>
+            <p>Cada expediente puede llevar la imagen de su carátula (JPG o PNG) para reconocerlo de un vistazo.</p>
+          </article>
+          <article class="card">
+            <h3>Cinco categorías</h3>
+            <p>Contratos, personal, predial, actas y jurídico: la clasificación que ya usa el archivo, lista desde el primer día.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reglas" class="section alt">
+      <div class="container">
+        <h2>Reglas claras que el sistema hace cumplir</h2>
+        <ul class="rules">
+          <li><strong>5 días</strong><span>de plazo para devolver cada expediente.</span></li>
+          <li><strong>3</strong><span>expedientes sin devolver como máximo por funcionario.</span></li>
+          <li><strong>0</strong><span>préstamos nuevos para quien tenga vencidos, hasta que los devuelva.</span></li>
+          <li><strong>1</strong><span>sola persona se lleva la última unidad, aunque dos archivistas la entreguen a la vez.</span></li>
+        </ul>
+        <p class="note">Los préstamos y las devoluciones nunca se borran. Un expediente que sale del catálogo queda en el historial.</p>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section">
+      <div class="container">
+        <h2>Cómo funciona</h2>
+        <ol class="steps">
+          <li>
+            <h3>El funcionario pide</h3>
+            <p>El archivista busca al funcionario por nombre o documento y elige de uno a tres expedientes.</p>
+          </li>
+          <li>
+            <h3>Archive revisa</h3>
+            <p>Comprueba que haya unidades, que el funcionario no tenga vencidos y que no pase de tres sin devolver.</p>
+          </li>
+          <li>
+            <h3>Se entrega con fecha</h3>
+            <p>El préstamo queda registrado con la fecha de vencimiento a cinco días y una copia fiel de los datos del expediente.</p>
+          </li>
+          <li>
+            <h3>Se devuelve y se cierra</h3>
+            <p>Cada expediente se recibe por separado. Cuando vuelve el último, el préstamo queda cerrado.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="seguridad" class="section alt">
+      <div class="container two-cols">
+        <div>
+          <h2>Quién entra y qué puede hacer</h2>
+          <p>Solo entran el administrador y los archivistas, con usuario y contraseña. Los funcionarios no necesitan cuenta: son quienes reciben los expedientes.</p>
+        </div>
+        <table class="roles">
+          <caption class="visually-hidden">Permisos por rol</caption>
+          <thead>
+            <tr><th scope="col">Acción</th><th scope="col">Administrador</th><th scope="col">Archivista</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Consultar el catálogo</td><td>Sí</td><td>Sí</td></tr>
+            <tr><td>Prestar y recibir</td><td>Sí</td><td>Sí</td></tr>
+            <tr><td>Registrar funcionarios</td><td>Sí</td><td>Sí</td></tr>
+            <tr><td>Crear y editar expedientes</td><td>Sí</td><td>No</td></tr>
+            <tr><td>Dar de alta archivistas</td><td>Sí</td><td>No</td></tr>
+            <tr><td>Reporte de más solicitados</td><td>Sí</td><td>No</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Archive · Préstamo de expedientes del archivo municipal. Las fechas se guardan en hora universal y los datos personales de los funcionarios no salen en los reportes.</p>
+    </div>
+  </footer>
+</body>
+</html>
