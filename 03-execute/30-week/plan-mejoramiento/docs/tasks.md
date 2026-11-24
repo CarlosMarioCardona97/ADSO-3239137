@@ -34,3 +34,12 @@ Cada tarea termina cuando su **evidencia** existe y se puede ejecutar (artículo
 El plan de mejoramiento exige el proyecto **totalmente terminado**: las 23 tareas con su evidencia, las 10 historias, las
 6 reglas, los 5 requisitos no funcionales y 15 archivos de prueba o más. Al cerrar cada tarea se cambia su estado en esta
 tabla en el mismo commit que trae la evidencia.
+
+## Estado al 23 de noviembre de 2026
+
+| Tareas | Estado | Evidencia |
+|---|---|---|
+| T-01 a T-19 | **terminadas** | `api/tests`: 20 archivos, 106 pruebas en verde (`api/README.md` § Pruebas) |
+| T-20 | **terminada** | `docker compose --env-file .env up --build` en `infra` levanta base, API y sitio |
+| T-23 | **terminada** | `page/index.html` abre sin la API; adaptable a 375, 768 y 1280 px |
+| T-21, T-22 | pendientes | — |
