@@ -138,9 +138,9 @@ Reglas transversales: **todas las marcas de tiempo son `timestamptz`**. **No hay
 | `loan_item.loan_id` → `loan.id` CASCADE | FK | **motor** |
 | `loan_item.dossier_id` → `dossier.id` RESTRICT | FK | **motor** |
 | `0 <= available_units <= total_units` | `ck_dossier_available_range` | **motor**: última barrera de concurrencia |
-| `total_units >= 1` | `ck_dossier_total_positive` | **pendiente (T-18)** · hoy solo dominio |
+| `total_units >= 1` | `ck_dossier_total_positive` | **motor** (bajada en T-18) |
 | Único `(loan_id, dossier_id)` | índice único | **motor** |
-| `role` en (`admin`, `archivist`) | `ck_user_role` | **pendiente (T-18)** · hoy solo dominio |
+| `role` en (`admin`, `archivist`) | `ck_user_role` | **motor** (bajada en T-18) |
 | Máximo 3 sin devolver por funcionario | — | **solo dominio** (no se puede expresar en un `CHECK`) |
 | Funcionario con vencidos no pide | — | **solo dominio** |
 | Descontar la unidad y crear la línea son una operación | — | **solo dominio** (una transacción) |
