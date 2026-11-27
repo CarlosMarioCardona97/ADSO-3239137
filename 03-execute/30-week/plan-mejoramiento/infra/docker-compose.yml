@@ -40,5 +40,36 @@ services:
     ports:
       - "8088:80"
 
+  # Solo con --profile seed: misma API y misma base, con el reloj 6 días atrás (plan D-15).
+  api-past:
+    profiles: [seed]
+    build: ../api
+    env_file: .env
+    environment:
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      CLOCK_OFFSET_DAYS: -6
+    entrypoint: ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000", "--no-reload"]
+    depends_on:
+      api:
+        condition: service_started
+
+  # Herramientas de ../tool: sembrador, prueba concurrente y prueba de carga.
+  tool:
+    profiles: [seed]
+    build: ../api
+    env_file: .env
+    environment:
+      API_URL: http://api:8000/api/v1
+      API_PAST_URL: http://api-past:8000/api/v1
+    volumes:
+      - ../tool:/tool:ro
+    entrypoint: ["php"]
+    command: ["/tool/seed.php"]
+    depends_on:
+      api-past:
+        condition: service_started
+
 volumes:
   db-data:
